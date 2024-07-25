@@ -102,3 +102,5 @@ sum_book = book_1 + book_2 + book_3
 print("Вартість першої книги", book_1, "грн,\n другої", book_2, "грн,\n третьої", book_3, "грн.")
 
 print("Відповідь: Всього всі книжки будуть коштувати", sum_book, "грн")
+
+print("test pull request")
