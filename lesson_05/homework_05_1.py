@@ -46,16 +46,20 @@ car_data = {
 }
 search_criteria = (2017, 1.6, 36000)
 
-new_car_data = []
-dict_car_data = {}
-
-for key, value in car_data.items():
-    if (value[1] >= search_criteria[0]) and (value[2] >= search_criteria[1]) and (value[-1] <= search_criteria[2]):
-        dict_car_data.update({key: value[-1]})
-sorted_dict_car_data = sorted(dict_car_data.items(), key=lambda x:x[1])
-sl_sorted_dict_car_data = sorted_dict_car_data[:5]
-conv_sort_dict_car_data = dict(sl_sorted_dict_car_data)
+#new_car_data = {}
+#dict_car_data = {}
+#
+#for key, value in car_data.items():
+#    if (value[1] >= search_criteria[0]) and (value[2] >= search_criteria[1]) and (value[-1] <= search_criteria[2]):
+#        dict_car_data.update({key: value[-1]})
+#print (new_car_data)
+#sorted_dict_car_data = sorted(dict_car_data.items(), key=lambda x:x[1])
+#sl_sorted_dict_car_data = sorted_dict_car_data[:5]
+#conv_sort_dict_car_data = dict(sl_sorted_dict_car_data)
 #print(conv_sort_dict_car_data)
+
+new_car_data = {key: value[-1] for key, value in car_data.items() if ((value[1] >= search_criteria[0]) and (value[2] >= search_criteria[1]) and (value[-1] <= search_criteria[2]))}
+conv_sort_dict_car_data = dict(sorted(new_car_data.items(), key=lambda x:x[1])[:5])
 
 print("За вашими критеріями пошуку: \n"
       f"- рік більше або дорівнює {search_criteria[0]} \n"
@@ -63,3 +67,5 @@ print("За вашими критеріями пошуку: \n"
       f"- вартість менше або дорівнює {search_criteria[-1]} \n"
       "Вам підійдуть машини (марка і ціна): \n"
       f"{conv_sort_dict_car_data}")
+
+
