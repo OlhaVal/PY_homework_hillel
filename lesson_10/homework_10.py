@@ -6,7 +6,7 @@
 
 import logging
 
-def log_event(username: str, status: str):
+def log_event(username: str, status: str) -> object:
     """
     Логує подію входу в систему.
 
@@ -17,6 +17,7 @@ def log_event(username: str, status: str):
     * success - успішний, логується на рівні інфо
     * expired - пароль застаріває і його слід замінити, логується на рівні warning
     * failed  - пароль невірний, логується на рівні error
+    :rtype: object
     """
     log_message = f"Login event - Username: {username}, Status: {status}"
 
@@ -35,5 +36,3 @@ def log_event(username: str, status: str):
         logger.warning(log_message)
     else:
         logger.error(log_message)
-
-print(log_event("Igor", "expired"))
