@@ -3,14 +3,11 @@ from homework_10 import log_event
 
 class MyTestCase(unittest.TestCase):
 
-    name = "Success_name"
-    status = "success"
-
     def test_1_success_loging(self):
-        name = self.name
-        status = self.status
+        name = "Success_name"
+        status = "success"
         log_event(name, status)
-        with open('login_system.log') as file:
+        with open('login_system.log', 'r') as file:
             last_line = file.readlines()[-1]
         self.assertIn(f'Login event - Username: {name}, Status: {status}', last_line)  # add assertion here
 
@@ -18,6 +15,7 @@ class MyTestCase(unittest.TestCase):
         name = "Expired_name"
         status = "expired"
         log_event(name, status)
+
         with open('login_system.log') as file:
             last_line = file.readlines()[-1]
         self.assertIn(f'Login event - Username: {name}, Status: {status}', last_line)  # add assertion here
@@ -26,6 +24,7 @@ class MyTestCase(unittest.TestCase):
         name = "Failed_name"
         status = "failed"
         log_event(name, status)
+
         with open('login_system.log') as file:
             last_line = file.readlines()[-1]
         self.assertIn(f"Login event - Username: {name}, Status: {status}", last_line)  # add assertion here
