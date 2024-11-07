@@ -18,3 +18,4 @@ class TestEmployee:
                      "Desired User's attrs are not equal to desired user attributes.")
          .is_equal_to(self.expected_mark_attrs))
 
+
