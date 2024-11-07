@@ -35,7 +35,9 @@ print(people_records)
 # task 3
 index_value = (6, 10, 13)
 
-for i in index_value:
-    list_element = people_records[i]
-    if list_element[2] >= 30:
-        print(list_element)
+#for i in index_value:
+#    if people_records[i][2] >= 30:
+#        print(people_records[i])
+
+new_people_records = ([people_records[i] for i in index_value if people_records[i][2] >= 30])
+print(new_people_records)

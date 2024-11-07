@@ -6,7 +6,7 @@
 
 import logging
 
-def log_event(username: str, status: str) -> object:
+def log_event_for_test(username: str, status: str) -> object:
     """
     Логує подію входу в систему.
 
