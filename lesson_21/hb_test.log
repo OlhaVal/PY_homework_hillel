@@ -8,3 +8,8 @@
 [ERROR|hearbeat_check|L60] 2024-11-07T20:46:04+0200: Heartbeat equal or more than 33 - This is error log
 [ERROR|hearbeat_check|L60] 2024-11-07T20:46:04+0200: Heartbeat equal or more than 33 - This is error log
 [ERROR|hearbeat_check|L60] 2024-11-07T20:46:04+0200: Heartbeat equal or more than 33 - This is error log
+[ERROR|heartbeat_monitoring_logger|L60] 2024-11-07T20:52:19+0200: Heartbeat equal or more than 33 - This is error log
+[WARNING|heartbeat_monitoring_logger|L57] 2024-11-07T20:52:19+0200: Heartbeat more than 31 and less than 33 - This is warning log
+[ERROR|heartbeat_monitoring_logger|L60] 2024-11-07T20:52:19+0200: Heartbeat equal or more than 33 - This is error log
+[ERROR|heartbeat_monitoring_logger|L60] 2024-11-07T20:52:19+0200: Heartbeat equal or more than 33 - This is error log
+[ERROR|heartbeat_monitoring_logger|L60] 2024-11-07T20:52:19+0200: Heartbeat equal or more than 33 - This is error log
